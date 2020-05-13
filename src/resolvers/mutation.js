@@ -52,14 +52,12 @@ export const Mutation = {
 
     },
     addChildrenToTicket: async (root, args, context) => {
-        await args['childrenIds'].forEach(async childrenId => {
-            await models.Ticket.update({
-                parentId: args['parentId'] 
-            }, {
-                where: {
-                    id: childrenId
-                }
-            })
+        await models.Ticket.update({
+            parentId: args['parentId'] 
+        }, {
+            where: {
+                id: args['childrenId']
+            }
         });
 
         return await Query.ticket(root, {id: args['parentId']}, context);
