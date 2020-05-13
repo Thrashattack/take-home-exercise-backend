@@ -5,7 +5,7 @@
   "author": "Kerem Kazan",
   "private": true,
   "scripts": {
-    "watch": "npx nodemon --exec babel-node ./server.js",
+    "watch": "npx nodemon --exec babel-node ./src/webserver/",
     "migrate": "npx sequelize-cli db:migrate --config ./src/db/config/config.json --migrations-path ./src/db/migrations",
     "seed": "npx sequelize-cli db:seed:all --config ./src/db/config/config.json --seeders-path ./src/db/seeders",
     "setup": "npm run migrate && npm run seed"

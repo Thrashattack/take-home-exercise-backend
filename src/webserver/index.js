@@ -1,7 +1,7 @@
 import express from "express";
 import { ApolloServer } from "apollo-server-express";
-import { typeDefs }  from './src/typedefs';
-import { resolvers } from './src/resolvers';
+import { typeDefs }  from '../typedefs';
+import { resolvers } from '../resolvers';
 
 const PORT = 4001;
 
