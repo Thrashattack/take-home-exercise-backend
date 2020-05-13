@@ -56,7 +56,7 @@ export const Mutation = {
             parentId: args['parentId'] 
         }, {
             where: {
-                id: args['childrenId']
+                id: args['childrenIds']
             }
         });
 
