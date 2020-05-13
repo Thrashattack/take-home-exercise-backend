@@ -1,0 +1,69 @@
+query {
+  tickets {
+    title
+  }
+}
+
+query {
+  tickets {
+    id,
+    title
+  }
+}
+
+mutation {
+  createTicket(title: "Learning GraphQL", isCompleted: false) {
+    title,
+    id,
+    isCompleted
+  }
+}
+
+mutation 
+{
+  updateTicket(id: 13, title: "Hello World of Updated GraphQL") {
+    title
+  }
+}
+
+mutation {
+  removeTicket(id: 13)
+}
+
+mutation {
+  createTicket(title: "Hello World Of GraphQL", isCompleted: false) {
+    title,
+    id,
+    isCompleted
+  }
+}
+
+mutation {
+  addChildrenToTicket(parentId: 14, childrenIds: [1, 2, 3]) {
+    children {
+      title
+    }
+  }
+}
+
+mutation {
+  setParentOfTicket(parentId: 2, childId: 3) {
+    title,
+    children {
+      id,
+      title
+    }
+  }
+}
+
+mutation {
+  removeParentFromTicket(id: 3) {
+    id,
+    title,
+    children {
+      id,
+      title
+    }
+  }
+}
+
