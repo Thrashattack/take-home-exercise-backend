@@ -1,0 +1,1 @@
+docker build . -t graph_ql_home_exercise && docker run -d -it -p 4001:4001 --name=graphqlex graph_ql_home_exercise npm run watch

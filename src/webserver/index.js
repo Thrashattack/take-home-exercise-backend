@@ -3,7 +3,7 @@ import { ApolloServer } from "apollo-server-express";
 import { typeDefs }  from '../typedefs';
 import { resolvers } from '../resolvers';
 
-const PORT = 4001;
+const PORT = process.env.port || 4001;
 
 const server = new ApolloServer({
   typeDefs,
